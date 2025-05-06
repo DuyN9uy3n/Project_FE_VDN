@@ -1,0 +1,551 @@
+:root {
+  --background: #1a1a2e;
+  --color: #ffffff;
+  --primary-color: #0f3460;
+  --primary-gradient: linear-gradient(135deg, #0f3460, #1b4d89);
+  --secondary-color: #6c757d;
+  --secondary-gradient: linear-gradient(135deg, #6c757d, #8a9299);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: var(--background);
+  color: var(--color);
+  letter-spacing: 1px;
+  transition: background 0.2s ease;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 2rem;
+  position: relative;
+}
+
+.content-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px; /* Tăng chiều rộng tối đa */
+}
+
+.main-content {
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  box-shadow: 0 0 36px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  z-index: 99;
+  padding: 2.5rem; /* Tăng padding */
+  min-height: 70vh; /* Tăng chiều cao tối thiểu */
+}
+
+.navbar {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid hsla(0, 0%, 65%, 0.158);
+  padding: 1rem 2rem;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  margin-left: 1rem;
+}
+
+.nav-link {
+  background: none;
+  border: none;
+  color: var(--color);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.05);
+}
+
+.project-info {
+  margin-bottom: 2rem;
+}
+
+.project-info p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.member-section {
+  margin-top: 1.5rem;
+}
+
+.member-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.member-card {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  backdrop-filter: blur(10px);
+}
+
+.member-initials {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  font-weight: 600;
+  margin-right: 0.75rem;
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.member-name {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.member-role {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+.menu-member {
+  margin-top: 1rem;
+  text-align: right;
+}
+
+.menu-icon {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.menu-icon:hover {
+  transform: scale(1.05);
+}
+
+.d-flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.mr-2 {
+  margin-right: 1rem;
+}
+
+.action-btn {
+  background: var(--primary-gradient);
+  color: var(--color);
+  padding: 12px 24px; /* Tăng kích thước nút */
+  border-radius: 8px;
+  outline: none;
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Khoảng cách giữa icon và text */
+}
+
+.action-btn:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.action-btn .btn-icon {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.form-select {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  background-color: #0000001f;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+}
+
+.form-select:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+
+.search-input {
+  padding: 10px;
+  width: 250px; /* Tăng chiều rộng input tìm kiếm */
+  color: var(--color);
+  outline: none;
+  background-color: #9191911f;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  backdrop-filter: blur(15px);
+}
+
+.search-input:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+
+.task-section {
+  background: transparent;
+  border-radius: 10px;
+  padding: 0;
+}
+
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 1px solid hsla(0, 0%, 65%, 0.158); /* Thêm viền cho bảng */
+}
+
+.project-table th,
+.project-table td {
+  padding: 15px; /* Tăng padding cho ô */
+  text-align: left;
+  border-bottom: 1px solid hsla(0, 0%, 65%, 0.158);
+}
+
+.project-table th {
+  background: var(--primary-color);
+  font-weight: 600;
+}
+
+.project-table td {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.project-table .btn {
+  margin: 0 8px; /* Tăng khoảng cách giữa các nút */
+  padding: 8px 16px; /* Tăng kích thước nút */
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.1s ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px; /* Đảm bảo nút không quá nhỏ */
+}
+
+.project-table .btn:hover {
+  transform: scale(1.05);
+}
+
+.project-table .btn-edit {
+  background-color: #f0ad4e;
+  border-color: #f0ad4e;
+}
+
+.project-table .btn-delete {
+  background-color: #d9534f;
+  border-color: #d9534f;
+}
+
+.project-table .btn-save-add,
+.project-table .btn-save-edit {
+  background-color: #5cb85c;
+  border-color: #5cb85c;
+}
+
+.project-table .btn-cancel-add,
+.project-table .btn-cancel-edit {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.project-table .form-control {
+  width: 100%;
+  padding: 10px; /* Tăng padding input */
+  color: var(--color);
+  background-color: #9191911f;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  backdrop-filter: blur(15px);
+}
+
+.project-table .form-control:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+
+.project-table .error-message {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.page-item {
+  margin: 0 5px;
+}
+
+.page-link {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color);
+  padding: 10px 15px; /* Tăng kích thước nút phân trang */
+  border-radius: 5px;
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+
+.page-link:hover {
+  background: var(--primary-color);
+  transform: scale(1.05);
+}
+
+.page-item.active .page-link {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.page-item.disabled .page-link {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.circle {
+  width: 8rem;
+  height: 8rem;
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle-one {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translate(-45%, -45%);
+}
+
+.circle-two {
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transform: translate(45%, 45%);
+}
+
+.theme-btn-container {
+  position: absolute;
+  left: 0;
+  bottom: 2rem;
+}
+
+.theme-btn {
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  width: 25px;
+  height: 25px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.theme-btn:hover {
+  width: 40px;
+}
+
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid hsla(0, 0%, 65%, 0.158);
+  color: var(--color);
+  opacity: 0.6;
+}
+
+.modal.fade {
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid hsla(0, 0%, 65%, 0.158);
+  color: var(--color);
+  border-radius: 10px;
+}
+
+.modal-header,
+.modal-footer {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  border-color: hsla(0, 0%, 65%, 0.158);
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-form {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.form-control {
+  background-color: #9191911f;
+  color: var(--color);
+  border: none;
+  border-radius: 5px;
+  backdrop-filter: blur(15px);
+  padding: 10px;
+  font-size: 14px;
+}
+
+.form-control:focus {
+  box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.2);
+  animation: wobble 0.3s ease-in;
+}
+
+.error-message {
+  color: #ff4d4d;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.modal-btn {
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-btn-cancel {
+  background: var(--secondary-gradient);
+  border: none;
+  color: var(--color);
+}
+
+.modal-btn-save {
+  background: var(--primary-gradient);
+  border: none;
+  color: var(--color);
+}
+
+.modal-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes wobble {
+  0% {
+    transform: scale(1.025);
+  }
+  25% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.025);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="stylesheet" href="../css/validate.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <title>Đăng nhập</title>
+  </head>
+  <body>
+    <section class="container">
+      <div class="login-container">
+        <div class="circle circle-one"></div>
+        <div class="form-container">
+          <img
+            src="https://raw.githubusercontent.com/hicodersofficial/glassmorphism-login-form/master/assets/illustration.png"
+            alt="illustration"
+            class="illustration"
+          />
+          <h1 class="opacity">ĐĂNG NHẬP</h1>
+          <form class="form-login" id="form-login">
+            <div class="input-group">
+              <input
+                type="text"
+                id="email"
+                placeholder="Email"
+                class="form-control"
+              />
+              <div class="error-message" id="emailError"></div>
+            </div>
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                placeholder="Mật khẩu"
+                class="form-control"
+              />
+              <div class="error-message" id="passwordError"></div>
+            </div>
+            <button type="submit" class="action-btn opacity">ĐĂNG NHẬP</button>
+          </form>
+          <div class="register-forget opacity">
+            <a href="./register.html">ĐĂNG KÝ</a>
+            <a href="#">QUÊN MẬT KHẨU</a>
+          </div>
+        </div>
+        <div class="circle circle-two"></div>
+      </div>
+      <div class="theme-btn-container"></div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/login.js" type="module"></script>
+  </body>
+</html>
